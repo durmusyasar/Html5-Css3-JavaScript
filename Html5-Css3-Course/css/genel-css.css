@@ -1,0 +1,287 @@
+.general {
+	/* border ve backround */
+	border: 2px solid #999; /* border çizdirerek renk ve genişlik belirtiliyor */
+	border: 10px solid transparent; /* transparent ile kenarlara renk verilmez */
+	border: 5px dotted green; /* dotted:noktalı solid:sürekli */
+	border-radius: 10px; /* nesnelerimiin kenarlarını yuvarlak yapılır */
+	border: none; /* border yok */
+	/* her köşesine farklı etki yapmak için 4 parametre ile yapılır(sol üst,sağ üst, sağ alt, sol alt) */
+	border-radius: url(img/css.png) no-repeat; /* arka plana resim koyma, tekrarlamayı engelleme  */ 
+	/* repeat left top ise sol üstten tekrarlaması için */
+	border-image: url(img/css.png) 50 round; /* resmi ne sıklıkla bölmek istiyoruz(50) */
+	/* round, repeat, space, stretch tekrarlama şekilllerini değiştirir */
+	-webkit-border-image: url(img/css.png) 50 round; /* safari için  */
+	-o-border-image: url(img/css.png) 50 round; /* opera için */
+	background: #900; /* arka kısma renk verme */
+	background-image: url(img/css.png), url(img/htmlcss.png);
+	background-position:right bottom, left top ; /* backround pozisyonlarını belirleme */
+	background-repeat:no-repeat, repeat ;/* tekrarlama olacak mı */
+	background:url(img/css.png) right bottom no-repeat, url(img/htmlcss.png) left top repeat;  /* üstteki 3 satırın tek satırda yazılmış hali  */
+	background-size: 100px 70px, auto;
+	background-origin: padding-box; /* bordera dokunmadan arka planı ayarlar border-box: bordera sıfır noktasından ayarlar content-box: içerik neredeyse oraya konumlandırılır */
+	background-clip: border-box; /*borderı içine alarak boyar content-box: sadece içerik olan kısım alınır padding-box: border en iç kısmından arka plan atar*/
+	
+	/* RGBA, HSL, HSLA, Grad */
+	background-color: rgba(100, 55, 45, 0.6);/* alpha = opacity değeridir*/
+	background-color: hsl( 0, 100%, 60%);/* renk tonu, doygunluk ve açıklık */
+	background-color: hsla( 0, 100%, 60%, 0.5);/* renk tonu, doygunluk ve açıklık, opacity */
+	background-image: linear-gradient(red, black); /* kırmızıdan siyaha geçişli renk yapma yukarıdan aşşağıya */
+	background-image: linear-gradient(to right,red, black); /* kırmızıdan siyaha geçişli renk yapma soldan sağa */
+	background-image: linear-gradient(to bottom right,red, black); /* kırmızıdan siyaha geçişli renk yapma sol köşeden sağ köşeye (diogonal) */
+	background-image: linear-gradient(50deg,red, black); /* kırmızıdan siyaha geçişli renk yapma sol köşeden sağ köşeye açısal */
+	background-image: repeating-linear-gradient(50deg,red, black); /* tekraryan gradient */
+	background-image: radial-gradient(50deg,red, black); /* dairesel(elips) gradient */
+	background-image: repeating-radial-gradient(50deg,red, black); /* tekrarlayan elips gradiant */
+	/* 1.argüman olarak 
+		- closest-side at 60% 50%: En yakın taraf
+		- farthest-side at 60% 55%: En uzak taraf
+		- closest-corner at 60% 50%: En yakın köşe
+		- farthest-corner at 60% 55%: En uzak köşe
+		*/
+	background-image: -webkit-linear-gradient(red, black); /* safari için  */
+	background-image: -o-linear-gradient(red, black); /* opera için  */
+	background-image: -moz-linear-gradient(red, black); /* mozilla için  */
+	/* farklı renkler vermek için parantez içine renkleri verelim */
+
+	/* Metin işlemleri(gölgelendirme,wrap,space) */
+	text-align: center; /* Metni ortalar */
+	text-shadow:3px 3px 5px #bbb; /* metni gölgelendirir(3px sağa doğru, 3px yukarıdan aşağıya doğru, bulanıklık, renk) */
+	box-shadow:7px 7px 5px rgba(0, 0, 0, 0.5); /* Kutu Gölgelendirme */
+	overflow: hidden; /* Alanın dışına taşan yazı(nesne) olursa görmezden gel(sakla) */
+	text-overflow: clip; /* metinin kesmesi aktif et */
+	white-space: nowrap; /* nesneyi bir sonraki satıra atma o alanda kalsın sığmayanı kes */
+	text-overflow: ellipsis; /* yazıyı kesme tşan kısmı ... şeklinde göster */
+	word-wrap: break-word; /* boşluk olmasa da yazıyı alanda taşma yapmadan alt satıra geçirir */
+	word-break: keep-all; /* metni kesmeden alt satıra atar */
+	word-break: break-all; /* sonuna kadar gider */
+
+	/* fontlar */
+	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Dephiana';
+
+	/* 2D transform */
+	-ms-transform: translate(100px, 100px); /* internet explorer için  */
+	-webkit-transform: translate(100px, 100px);/* safari için */
+	transform: translate(100px, 100px); /* 100px sağ ve aşşağıya göre konumlandır(eski konumuna göre) */
+	transform: translate(-20px, -100px); /* sola ve yukarıya */
+	transform: rotate(20deg); /* saat yönünde 20 derece döndür (- koyarsak başına saat yönünün dersine döndürme) */
+	transform: scale(2,2); /* boyutunu 2 kat genişlik ve yükseklik olarak büyüt(scale: bir nesneyi büyültmek veya küçültmek için kullanılır9 */
+	transform: skew(20deg, 10deg); /* x ve y eğrisinde bir yatma işlemi yapar */
+	transform: matrix(2,-0.3,0,1,0,0); 
+	/*
+	scaleX:boyut(Genişlik)
+	skewY:eğiklik
+	skewX:eğikik
+	scaleY:boyut(Yükseklik)
+	translateX: eski konumuna göre nereye konumlansın
+	translateY: "       "       "   "       "
+	*/
+
+	/* 3D transform */
+	transform: rotateX(150deg); /* 150 derece döndür x ekseninde */
+	transform: rotateY(210); /* 210 derece döndürür y ekseninde */
+	transform: rotateZ(180); /* 180 derece döndürür z ekseninde */
+	transform-origin: 20% 45%; /* y ve x ye göre konumlandır */
+	transform-style: preserve-3d; /* iç içe geçecek nesnelerde nasıl davranacağını ayarlar (3 boyutlu kısmı koru)*/
+	perspective: 100px; /* bakış açısı */
+	perspective-origin: left; /* bakış konumu  */
+	backface-visibility: hidden; /* arkaplan gözüksün mü (gözükmesin)*/
+
+	/* Transitions */ 
+	transition: width 2s, height 0.5s, transform 1s; /* geçiş 2s de genişlik olarak uygula, dönüşüm 1sn */
+	transition: all 1s ease-in-out;/* tüm css ile ilgili kısımlarda geçiş uygular */
+	transition-timing-function: linear; /* doğrusal yap */
+	transition-timing-function: ease; /* gevşeterek yap */
+	transition-timing-function: ease-in; /* yavaş bir gevşeme ile yap */
+	transition-timing-function: ease-out; /* kapatırken yavaş yap */
+	transition-timing-function: ease-in-out; /* açılırken ve kapanırken yavaş yap */
+	transition-delay: 1s; /* Gecikmeli açılma ve kapanma */
+	/* alternatif(ilkel olan) */
+	transition-property:width;
+	transition-duration: 1s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.3s;
+
+	/* Resim İşlemleri */
+	display: block; /* nesnenin bulunduğu satırı sadece o nesneye ayırır */
+	display:flex; /* esnek bir alan tanımlar */
+	filter: blur(3px); /* remi bulanıklaştırma */
+	/* 
+	brightness: parlaklık
+	contrast: kontrast
+	grayscale: gri tonlama
+	hue-rotate: renk tonunu döndür
+	invert: rengini ters çevir
+	opacity: soluklaştırma
+	saturate:renk doyumu
+	sepia: siyah boyama
+	drop-shadow: gölgelendirme
+	*/
+	backface-visibility: hidden; /* Arka yüzü Gizle */
+
+	vertical-align: middle; /* dikey hizalama ortala*/
+	list-style-type: none; /* liste işaretlerini kaldırır */ 
+	resize: horizontal; /* yatayda yeniden boyutlandırabilir *//* both ile hem yatay hem de dikeyde izin veir*/
+	overflow: auto; /* nesne sayfaya sığmadığı zaman scrool oluşturur */
+	outline: auto; /* dış çerçeve olmasın */
+	outline-offset: 10px; /* iç çerçeve(border) ile dış verçeve arasında boşluk oluşturu */
+}
+.general:hover{
+	/* üzerine geldiğin zaman miras alınan klasın özellikleri değiştirilir */
+	width: 550px; /* transition için  */
+	max-width: 100%; /* maximum genişlik verir */
+	height: 100px;
+	transform: rotate3d(123deg);
+	transform: translate(150px, 150); /* x ve y ekseninde 150px kayar */
+		
+	padding: 30px 0px 0px 30px; /* iç boşluk(üst, sağ, alt, sol) */
+	padding: 15 px 30 px; /* üst-alt 15 px sağ sol dan 30px */
+	margin: 0rem; /* dış boşluk */
+	width: 400px; /* Genişlik */
+	height: 100px; /* Yükseklik */
+	color: white; /* içerik rengi */
+	position: absolute; /* sayfadan bağımsız */
+	justify-content: center; /* içeriği iki tarafa da eşit olarak yasla */
+	cursor: pointer; /* mouse üzerine getirildiği zaman el işareti çıkartma */
+	cursor: not-allowed; /* üzerine gelindiği zaman tıklanamaz işareti çıkar */
+	text-align: center; /* yazılar ortada toplanır kendi bölgesinde */
+	text-decoration: none; /* a tag'ınınn altında çıkan çizgiyi yok eder */ 
+}
+@font-face {
+	font-family: 'Dephiana';
+	src: url('fonts/Dephiana.eot');
+	src: url('fonts/Dephiana.eot?#iefix') format('embedded-opentype'),
+			url('fonts/Dephiana.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Dephiana';
+	src: url('fonts/Dephiana.svg#Dephiana') format('svg'),
+			url('fonts/Dephiana.ttf') format('truetype'),
+			url('fonts/Dephiana.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+.animasions{
+	margin:20px;
+	width: 100px;
+	height: 100px;
+	background-color: hsl( 0, 100%, 60%);
+	position: relative;/* Eski konumundan farklı bir konuma konumlandırılabilir olsun */
+	animation: logo 10s linear infinite;
+}
+.animasions:hover{
+	animation-name: Renk; /*  animasyon adı (opsiyonel) */
+	animation-duration: 4s; /* animasyon süresi 4sn */
+	animation-delay: 2s; /* Animasyon 2sn gecikmeli başlasın */
+	animation-iteration-count: 3;/* Döngü ne kadar sürsün 3 kere (sürekli çalışmasını istiyorsak: infiniti)*/
+	animation-direction: reverse; /* Animasyona yön verme(tersine) , saat yönüne ve saat yönünün tersine çalışmasını istiyorsak: alternate*/
+	animation-timing-function: linear; /* sabit hızla ilerleme (easy, ease-in, ease-out, ease-in-out) parametrelerini alabilir*/
+	animation: Renk 5s linear 2s infinite alternate; /* Alternatif */
+}
+@keyframes Renk{
+	from{background-color: darkblue;} /* darkblue renginden  */
+	to{background-color: darkolivegreen;} /* darkolivegreen rengine git */
+	/* Yüzdelik olarak vermek istersek */
+	0%{background-color:red;left:0;top:0} /* soldan ve üstten 0 */
+	25%{background-color:white;left:200;top:0} /* soldan 200 ve üstten 0 */
+	50%{background-color:blue;left:200;top:200} /* soldan ve üstten 200 */
+	75%{background-color:green;left:0;top:200} /* soldan 0 ve üstten 200 */
+	100%{background-color:black;left:0;top:0} /* soldan ve üstten 0 */
+}
+/* Sonsuz Döngü ile dönen logo */
+@keyframes logo {
+	0%{transform: rotateY(0);}
+	100%{transform: rotateY(360deg);}
+}
+
+.animasions:not(:last-child){ /* son elman hariç diğer elamanların border'ın kaldırma */
+	border: none;
+}
+
+/*  */
+*{
+	direction: ltr; /* tüm elementlerimin yönü soldan sağa doğru olsun */ /* standart */
+	flex-direction: row-reverse; /* tanımlanan alan soldan sağa doğru sıralanır  */
+	flex-direction: column; /* tanımlanan alanları yukarıdan aşşağıya doğru tanımlar  */
+	align-items: stretch; /* elementleri alan kadar aşşağıya uzatır */
+	flex-wrap: wrap; /* nesneyi hizalarken dikkate alır */
+	align-content: center; /* nesneleri hizalar */
+	align-self: center; /* nesneleri kendine göre hizalar */
+}
+
+/* Media sorguları */
+@media screen and (max-width:480){
+	/* 0 ile 480xp arasında bu kodları çalıştır */
+
+}
+@media screen and (min-width:480){
+	/* 480px  ile üstünde bu kodları çalıştır */
+	
+}
+@media screen and (max-width:699) and (min-width:520){
+	/* 520 ile 699px arasında bu kodları çalıştır */
+	
+}
+
+/*  pseudo classları */
+p:empty{
+	/* boş olan p taglarının alnına uygula */
+}
+p:first-child{/* ilk nesneye uygula last-child da aynı manık*/}
+p:first-of-type{/* ilk gördüğün yerde nesneye uygula last-of-type da aynı mantık*/}
+:not(p) {/* p olmayanlara uygula */}
+p:nth-child(4){/* 4.nesneye uygula :nth-of-type aynı mantık */} 
+input:in-range{/* input için css yazmamızı sağlar */}
+input:out-of-range{/* input için alanın dışına çıktığı zaman uygulanan css */}
+
+
+/*  object-fit */
+img{
+	object-fit: cover;/*  en ve boy oranını koruyarak resmin fazlalığını keser */
+	/* 
+	contain : resmi net görülecek şekilde boyutlandırır
+	scale-down: "
+	none : cover ile aynı
+	*/
+}
+
+/* Mltiple column */
+*{
+	column-count: 5; /* sayfayı 5 parçaya böler */
+	column-gap: normal; /* sütunlar arasındaki boşluğu ayarlar */
+	column-rule-style: inherit; /* still kuralı verilecek */
+	column-rule-color: ivory; /* sütunlara renk verir */
+	column-rule-width:10px; /* sütunlara kalınlık verir */
+	column-rule:inherit aliceblue 10px; /* üsteki 3 kodun tek hali */
+	column-span: all;/* başlığın altına sütunları atar */
+	column-width: 10ex;/* sütun genişliklerinin belirler */
+	column-fill: balance;/* sütunu doldur */
+	columns: 10cm 5;/* column with ile  column-count birleşimi*/
+}
+
+/* var fonksiyonu */
+:root{
+	--main-bg-color:red;
+}
+
+.div{
+	background-color: var(--main-bg-color);
+}
+
+/* Grid System */
+.item1{grid-area: header;}
+.item2{grid-area: menu;}
+.item3{grid-area: main;}
+.item4{grid-area: right;}
+.item5{grid-area: footer;}
+
+.grid-container{
+	display: grid;
+	grid-template-areas:
+	'header header header header header header'
+	'menu main main main right right'
+	'manu footer footer footer footer footer';
+	
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<main>
+	<canvas id="newCanvas" width="400" height="300" style="border: 1px solid #bbb;">
+		<script type="text/javascript">
+			var myCanvas = document.querySelector("#newCanvas");
+			var content = myCanvas.getContext("2d");
+			content.fillStyle = "#FF0000";
+			content.fillRect(25,35,64,64);
+			content.strokeStyle ="blue";
+			content.lineWidth ="3";
+			content.strokeRext(25,35,64,64);
+		</script>
+	</canvas>
+	<canvas id="newCanvas2" width="400" height="300" style="border: 1px solid #bbb;">
+		<script type="text/javascript">
+			var myCanvas = document.querySelector("#newCanvas2");
+			var content2 = myCanvas.getContext("2d");
+			content2.lineWidth ="5";
+			content2.strokeStyle="green";
+			content2.moveTo(0,150);
+			content2.lineTo(200,150);
+			content2.stroke();
+			content2.beginPath();
+			content2.lineWidth("4");
+			content2.strokeStyle="red";
+			content2.moveTo(200,0);
+			content2.lineTo(200,300);
+			content2.stroke();
+		</script>
+	</canvas>
+</main>
+</body>
+</html>

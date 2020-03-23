@@ -1,0 +1,22 @@
+.BORDER {
+	border: 2px solid blue;
+}
+
+h2 {
+	text-align: center; /* metni sayfanın ortasına getir */
+	letter-spacing: 1.5px; /*harfler arasına boşluk koy*/
+}
+
+/* bütün içeriğin etkilememiz için "*" ile yapmalıyız 
+*{
+	color: darkgoldenrod; /* veya rgb kullanılabilir rgb(25,25,25) veya "#" ile de hexia decimal kod verilebilir 
+}*/
+
+makale {
+	color: darkgoldenrod;
+	background-color: #111;
+	margin-bottom: 15px;/* Aşşağısı ile olan arasında ki boşluk  */
+	padding: 15px;/* iç boşluk */
+	display: block; /* Bir satırı komple kapla */
+	font-size: 20px;
+}

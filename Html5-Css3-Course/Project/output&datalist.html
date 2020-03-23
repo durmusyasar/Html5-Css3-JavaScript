@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>html5&css3</title>
+	<link rel="stylesheet" type="text/css" href="css/detail&summary.css">
+	<title></title>
+</head>
+<body>
+    <main>
+	<header class="header">
+		<h1>Html 5 ve Css 3</h1>
+	</header>
+	<nav class="menu">
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="">Services</a></li>
+			<li><a href="">News</a></li>
+			<li><a href="">Gallery</a></li>
+			<li><a href="">Privacy Policy</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+	</nav>
+	<aside class="sidebar">
+		<details>
+		<summary>Eğitim Setleri</summary>
+		<ul>
+			<li><a href="#">Html</a></li>
+			<li><a href="#">Css</a></li>
+			<li><a href="#">Html5</a></li>
+			<li><a href="#">Css3</a></li>
+			<li><a href="#">Jacascript</a></li>
+			<li><a href="#">Node Js</a></li>
+		</ul>
+    </details>
+    <details>
+        <summary>Pictures</summary>
+        <img src="img/penguins.jpg" width="100" height="auto" alt="">
+    </details>
+    <details open>
+        <summary>Login</summary>
+        <form>
+               <label>Username:</label>
+               <p><input type="text" name="username" id="username"></p>
+               <label>Password:</label>
+               <p><input type="password" name="password" id="password"></p>
+               <input type="submit" id="login" value="login"> 
+        </form>
+    </details>
+	</aside>
+	<section class="change">
+		<header><h2>Makale Başlığı burada</h2></header>
+       <form>
+           <input name="Language" list="languages">
+           <datalist id="languages">
+               <option value="Html"></option>
+               <option value="Css"></option>
+               <option value="Javascript"></option>
+               <option value="Php"></option>
+               <option value="Node Js"></option>
+           </datalist>
+       </form>
+       <form oninput="Calculate.value=parseInt(Number1.value) + parseInt(Number2.value)">
+           0 <input type="range" id="Number1" name="Number1" value="58">100 <br>
+           +<br>
+           <input type="number" id="Number2" name="Number2" value="50">
+           =<br>
+           <output name="Calculate" for="Number1 Number2"></output>
+       </form>
+    </section>
+		<footer class="page-bottom">
+		&copy;2020 durmusyasar tüm hakları saklıdır
+	</footer>
+	<script>
+		var valueLoad = 0;
+		progressBar(valueLoad);
+		function progressBar(valueLoad){
+			var bar=document.getElementById("load");
+			bar.value=valueLoad;
+			valueLoad++;
+			var loadTime = setTimeout("progressBar("+valueLoad+")",200);
+			if(valueLoad > 100) {
+				clearTimeout(loadTime)
+				document.getElementById("result").innerHTML="Yükleme Tamalandı"
+			}
+		}
+    </script>
+    </main>
+</body>
+</html>
