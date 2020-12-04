@@ -83,7 +83,7 @@ $(function(){
             return true
         },
         eventAfterAllRender: function() {
-            alert("Takvim Yüklendi")
+           
         }
     })
 

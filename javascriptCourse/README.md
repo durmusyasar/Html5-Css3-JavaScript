@@ -1,0 +1,47 @@
+## Javascript Projects
+- auto-write-text
+- background-changer
+- carousel
+- countdown-timer
+- dark-mode-toggle
+- drawing-app
+- Exchange
+- Film
+- FormValidator
+- FullCalendar
+- Github
+- github-profiles
+- hamburger
+- ImageTextSensitive
+- MouseFollowTextOrImage
+- movie-app
+- notes-app
+- Other
+    - 2DCaptcha
+    - AutoClosePage
+    - Calculator
+    - CharacterCount
+    - ScrollingText
+    - SearchMailInText
+    - StatisticsAnimation
+    - TabMenu
+    - TimeChangeTitle
+- password-generator
+- popup
+- purple-heart-rain
+- Question-Solition (Algorithim)
+- quiz
+- quiz-app
+- recipe-app
+- RollDice
+- Slider
+- Slider-2
+- sound-board
+- TextZoom
+- toast-notification
+- ToDo
+- ToDoApp
+- todo-app
+- weather-app
+- Yandex
+- zoom-effect

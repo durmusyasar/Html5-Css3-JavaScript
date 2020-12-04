@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 3rem;
+  min-height: 100vh;
+}
+
+#slaytalani {
+  width: 1000px;
+  height: 350px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+#resim {
+  width: 1000px;
+  height: 350px;
+  position: relative;
+}
+.solalani {
+  width: 100px;
+  height: 350px;
+  position: absolute;
+  text-align: left;
+  left: 0px;
+  top: 0px;
+}
+.sagalani {
+  width: 100px;
+  height: 350px;
+  position: absolute;
+  text-align: right;
+  right: 0px;
+  top: 0px;
+}
+.sol {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 40%;
+  left: 25px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0s;
+}
+.sag {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 40%;
+  right: 25px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out 0s;
+}
+.solalani:hover .sol {
+  opacity: 0.5;
+}
+.sagalani:hover .sag {
+  opacity: 0.5;
+}
